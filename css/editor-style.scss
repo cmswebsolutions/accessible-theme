@@ -1,0 +1,183 @@
+$white:			#F5F4F5;
+$grey:			#66726C;
+$lightgrey:		#DFDFDF;
+$lightblue:		#5B88A5;
+$blue:			#173E64;
+$arial:			"Arial Black", "Arial", Arial, sans-serif;
+$opensans:		"Open Sans", Helvetica, sans-serif, sans;
+
+
+body#tinymce{
+
+	font-family: $opensans !important;
+	font-size: 100%;
+
+
+
+
+
+	details.editor{
+		border: 1px solid #DDD;
+		border-radius: 3px;
+		pointer-events: none;
+		padding: 0.5em;
+
+		summary::-webkit-details-marker { display:none; }
+		summary::-moz-details-marker { display:none; }
+		summary::-ms-details-marker { display:none; }
+		summary::-o-details-marker { display:none; }
+		summary::details-marker { display:none; }
+
+		.details-content{
+			border: 1px solid #EEE;
+			position: relative;
+			padding: 0.5em;
+
+
+			&:before{
+				content: "Content";
+				display: block;
+				color: #49AAEA;
+			}
+		}
+
+		summary{
+			border: 1px solid #EEE;
+			position: relative;
+			font-size: 150%;
+			padding: 0.5em;
+
+
+			&:before{
+				content: "Heading";
+				display: block;
+				color: #49AAEA;
+				font-size: 70%;
+			}
+		}
+	}
+
+
+	h1, h2, h3, h4{
+		margin-top: 0;
+		margin-bottom: 0.5em;
+//			text-transform: uppercase;
+		line-height: 1em;
+		color: $blue;
+
+	}
+
+	h1{
+		//letter-spacing: -0.04em;
+		font-weight: 600;
+		border-bottom: 1px solid $blue;
+	}
+
+	p, ul, ol{
+		margin: 1em 0;
+	}
+
+	ul, ol{
+		padding-left: 1.5em;
+
+		li{
+			margin-bottom: 0.5em;
+		}
+	}
+
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	a{
+		color: #44657c;
+		transition: color 0.1s;
+
+		&:hover, &:focus{
+			color: $lightblue;
+		}
+
+		&:active{
+			transition: color 2s;
+			color: blue;
+		}
+	}
+
+	table{
+		border-collapse: collapse !important;
+		border: none !important;
+		margin: 1em auto;
+		padding: 0;
+		background: rgba(0,0,15,0.05);
+		width: 100%;
+		max-width: 100%;
+		overflow-x: scroll;
+
+		caption{
+			font-weight: 600;
+			text-align: left;
+			font-size: 125%;
+			padding-bottom: 0.25em;
+		}
+
+		thead, tbody{
+			max-width: 100%;
+		}
+
+		thead{
+			background: $blue;
+			color: $white;
+			text-align: left;
+
+			tr{
+				th:first-child{
+					border-radius: 2px 0 0 0;
+				}
+				th:last-child{
+					border-radius: 0 2px 0 0;
+				}
+			}
+		}
+
+		tr{
+			border-bottom: 1px solid #CCC;
+
+			td, th{
+				padding: 0.5em;
+				padding-right: 1em;
+				font-weight: normal;
+			}
+		}
+
+	}
+
+
+
+	.wp-caption{
+		max-width: 100%;
+		position: relative;
+		display: block;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		p.wp-caption-text{
+			display: block;
+			position: absolute;
+			width: 100%;
+			margin: 0;
+			padding: 0.5em;
+			left: 0;
+			bottom: 0;
+			color: $white;
+			background: rgba(0,0,0,0.7);
+		}
+	}
+
+
+
+}

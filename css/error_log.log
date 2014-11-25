@@ -1,0 +1,11 @@
+11/14/14 7:40:16: style.scss - parse error: failed at `width: 100%:` line: 99
+11/17/14 5:23:14: style.scss - parse error: failed at `#FFF;` line: 16
+11/17/14 5:24:31: style.scss - parse error: failed at `#FFF;` line: 16
+11/19/14 6:42:38: style.scss - parse error: failed at `height: 100%:` line: 528
+11/24/14 9:00:06: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 13
+11/24/14 9:00:14: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 14
+11/24/14 9:00:16: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 14
+11/24/14 9:00:52: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 14
+11/24/14 9:01:09: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 14
+11/24/14 9:01:18: editor-style.scss - parse error: failed at `summary:: details-marker { display:none; }` line: 14
+11/25/14 8:10:12: style.scss - expecting color: failed at `$color-dark:		darken($color, 10%);` line: 11

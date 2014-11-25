@@ -1,0 +1,140 @@
+body#tinymce {
+  font-family: "Open Sans", Helvetica, sans-serif, sans !important;
+  font-size: 100%;
+}
+body#tinymce details.editor {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  pointer-events: none;
+  padding: 0.5em;
+}
+body#tinymce details.editor summary::-webkit-details-marker {
+  display: none;
+}
+body#tinymce details.editor summary::-moz-details-marker {
+  display: none;
+}
+body#tinymce details.editor summary::-ms-details-marker {
+  display: none;
+}
+body#tinymce details.editor summary::-o-details-marker {
+  display: none;
+}
+body#tinymce details.editor summary::details-marker {
+  display: none;
+}
+body#tinymce details.editor .details-content {
+  border: 1px solid #eee;
+  position: relative;
+  padding: 0.5em;
+}
+body#tinymce details.editor .details-content:before {
+  content: "Content";
+  display: block;
+  color: #49aaea;
+}
+body#tinymce details.editor summary {
+  border: 1px solid #eee;
+  position: relative;
+  font-size: 150%;
+  padding: 0.5em;
+}
+body#tinymce details.editor summary:before {
+  content: "Heading";
+  display: block;
+  color: #49aaea;
+  font-size: 70%;
+}
+body#tinymce h1, body#tinymce h2, body#tinymce h3, body#tinymce h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1em;
+  color: #173e64;
+}
+body#tinymce h1 {
+  font-weight: 600;
+  border-bottom: 1px solid #173e64;
+}
+body#tinymce p, body#tinymce ul, body#tinymce ol {
+  margin: 1em 0;
+}
+body#tinymce ul, body#tinymce ol {
+  padding-left: 1.5em;
+}
+body#tinymce ul li, body#tinymce ol li {
+  margin-bottom: 0.5em;
+}
+body#tinymce img {
+  max-width: 100%;
+  height: auto;
+}
+body#tinymce a {
+  color: #44657c;
+  transition: color 0.1s;
+}
+body#tinymce a:hover, body#tinymce a:focus {
+  color: #5b88a5;
+}
+body#tinymce a:active {
+  transition: color 2s;
+  color: blue;
+}
+body#tinymce table {
+  border-collapse: collapse !important;
+  border: none !important;
+  margin: 1em auto;
+  padding: 0;
+  background: rgba(0, 0, 15, 0.05);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+body#tinymce table caption {
+  font-weight: 600;
+  text-align: left;
+  font-size: 125%;
+  padding-bottom: 0.25em;
+}
+body#tinymce table thead, body#tinymce table tbody {
+  max-width: 100%;
+}
+body#tinymce table thead {
+  background: #173e64;
+  color: #f5f4f5;
+  text-align: left;
+}
+body#tinymce table thead tr th:first-child {
+  border-radius: 2px 0 0 0;
+}
+body#tinymce table thead tr th:last-child {
+  border-radius: 0 2px 0 0;
+}
+body#tinymce table tr {
+  border-bottom: 1px solid #ccc;
+}
+body#tinymce table tr td, body#tinymce table tr th {
+  padding: 0.5em;
+  padding-right: 1em;
+  font-weight: normal;
+}
+body#tinymce .wp-caption {
+  max-width: 100%;
+  position: relative;
+  display: block;
+}
+body#tinymce .wp-caption img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body#tinymce .wp-caption p.wp-caption-text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  left: 0;
+  bottom: 0;
+  color: #f5f4f5;
+  background: rgba(0, 0, 0, 0.7);
+}
