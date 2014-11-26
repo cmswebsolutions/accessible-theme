@@ -5,7 +5,6 @@ jQuery(document).ready(function($){
 		$('details').details();
 
 
-
 	// remove inline widths and heights
 		$('img').each(function(){
 			$(this).removeAttr('width')

@@ -720,6 +720,11 @@ footer {
 				max-height: 100%;
 				width: auto;
 				box-shadow: 0 0 1em rgba(0,0,0,0.8);
+				pointer-events: none;
+
+				img{
+					pointer-events: none;
+				}
 			}
 
 			.caption{

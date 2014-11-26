@@ -540,6 +540,10 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   max-height: 100%;
   width: auto;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+#lightbox .image #img-box #photo img {
+  pointer-events: none;
 }
 #lightbox .image #img-box .caption {
   text-align: left;
@@ -709,7 +713,6 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
     padding: 0.5em 1em;
   }
   header nav ul li.hover ul.sub-menu li a:hover, header nav ul li.hover ul.sub-menu li a:focus {
-    box-shadow: 2px 2px 0 #ccc;
     background: #173e64;
     color: #f5f4f5;
   }

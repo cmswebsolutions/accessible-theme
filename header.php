@@ -16,6 +16,10 @@
 		<?php wp_head(); ?>
 	</head>
 
+
+
+
+
 	<body <?php body_class(); ?>>
 		<span class="band"></span>
 		<div class="inner">

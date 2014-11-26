@@ -23,7 +23,9 @@
 
 
 		<?php else: ?>
-			<h1>No posts to display</h1>
+			<h1>Sorry, No posts to display</h1>
 		<?php endif; ?>
 	</div>
+
 <?php get_footer(); ?>
+
