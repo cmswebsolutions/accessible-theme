@@ -27,6 +27,8 @@ jQuery(document).ready(function($){
 
 	$(window).load(function() {
 
+		console.log('Code Added');
+
 		// Navigation
 		$('nav ul li:first-child').addClass('first');
 		$('nav ul li:last-child').addClass('last');

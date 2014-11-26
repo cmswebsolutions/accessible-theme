@@ -13,6 +13,9 @@
 		</footer>
 
 
+
+
+
 		<div id="lightbox" tabindex="0">
 			<div class="image">
 				<div id="img-box">
