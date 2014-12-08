@@ -20,7 +20,12 @@
 
 
 
-	<!--<body <?php body_class(); ?>>-->
+	<!--
+		<body <?php body_class(); ?>>
+
+		For a full width site, add the string 'full' into the body_class function below.
+		If left blank, site will default to the 30% left 70% right layout
+	-->
 	<body <?php body_class('full'); ?>>
 		<span class="band"></span>
 		<div class="inner">

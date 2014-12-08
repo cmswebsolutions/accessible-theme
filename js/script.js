@@ -67,7 +67,7 @@ jQuery(document).ready(function($){
 		if(!tall) {
 			$('header').css('position', 'static').css('float', 'left');
 		} else {
-			var header = $('.header');
+			var header = $('header');
 			var offset = header.offset();
 			var offsetX = offset.left;
 			var offsetY = offset.top;
@@ -113,6 +113,7 @@ jQuery(document).ready(function($){
 				$(this).parent().parent().lightboxMe();
 			}
 		});
+
 
 		$.fn.extend({
 			lightboxMe: function(){
