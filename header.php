@@ -16,23 +16,20 @@
 		<?php wp_head(); ?>
 	</head>
 
-
-
-
-
 	<!--
-		<body <?php body_class(); ?>>
+	<body <?php body_class('full'); ?>>
 
 		For a full width site, add the string 'full' into the body_class function below.
 		If left blank, site will default to the 30% left 70% right layout
 	-->
-	<body <?php body_class('full'); ?>>
+
+	<body <?php body_class(); ?>>
 		<span class="band"></span>
 		<div class="inner">
 			<header role="banner">
 				<a class="skip" href="#main">Skip to Content</a>
 					<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
-					<!--<img class="logo" src="<?php echo bloginfo('template_directory'); ?>/img/logo.svg" alt="" />-->
+					<img class="logo" src="<?php echo bloginfo('template_directory'); ?>/img/logo.svg" alt="" />
 
 
 					<!--
