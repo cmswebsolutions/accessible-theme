@@ -20,13 +20,15 @@
 
 
 
-	<body <?php body_class(); ?>>
+	<!--<body <?php body_class(); ?>>-->
+	<body <?php body_class('full'); ?>>
 		<span class="band"></span>
 		<div class="inner">
-			<header role="banner" class="header">
+			<header role="banner">
 				<a class="skip" href="#main">Skip to Content</a>
 					<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
-					<img class="logo" src="<?php echo bloginfo('template_directory'); ?>/img/logo.svg" alt="">
+					<!--<img class="logo" src="<?php echo bloginfo('template_directory'); ?>/img/logo.svg" alt="" />-->
+
 
 					<!--
 					<div id="search">

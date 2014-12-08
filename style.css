@@ -3,6 +3,7 @@ Theme Name: 	CMS Demo Blog
 Author: 		CMS Web Solutions
 Author URI: 	http://cmswebsolutions.com
 */
+/* */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -605,6 +606,59 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   display: inline-block;
   height: 100%;
   width: 0.001%;
+}
+.full header {
+  width: 100%;
+  display: block;
+  padding: 1em 0;
+}
+.full header ul li {
+  display: inline-block;
+  margin-right: 1em;
+}
+.full header ul li a {
+  margin-bottom: 0;
+  padding: 0.25em 2em;
+  border-width: 2px;
+}
+.full header ul li.current-menu-ancestor ul, .full header ul li.current_page_parent ul, .full header ul li.current-menu-item ul {
+  display: none;
+}
+.full header ul li.hover ul {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+}
+.full header ul li.hover ul li {
+  display: block;
+  width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.full header ul li.hover ul li:first-child {
+  padding-top: 1em;
+}
+.full header ul li.hover ul li a {
+  background: #0d243b;
+  border: none;
+  color: #f5f4f5;
+  padding: 0.4em 1em;
+  transition: background 0.2s;
+}
+.full header ul li.hover ul li a:hover, .full header ul li.hover ul li a:focus {
+  background: #173e64;
+}
+.full #main {
+  width: 100%;
+  float: none;
+  clear: both;
+}
+.full #main #content {
+  width: 100%;
 }
 @media screen and (max-width: 975px) {
   body > .band {
