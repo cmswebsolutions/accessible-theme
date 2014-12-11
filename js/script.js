@@ -189,8 +189,20 @@ jQuery(document).ready(function($){
 					var alt = 		nextitem.find('img').attr('alt');
 					var caption = 	nextitem.find('dd').text();
 
-					$('#lightbox #photo').attr('src', src).attr('alt', alt);
-					$('#lightbox .caption').text(caption);
+					$('#lightbox #img-box').addClass('changing');
+
+					window.setTimeout(changeSrc, 1200);
+					window.setTimeout(showImage, 1500);
+
+					function changeSrc() {
+						$('#lightbox #photo').attr('src', src).attr('alt', alt);
+						$('#lightbox .caption').text(caption);
+					}
+
+					function showImage() {
+						$('#lightbox #img-box').removeClass('changing');
+					}
+
 				});
 
 				// Previous image button
@@ -212,8 +224,20 @@ jQuery(document).ready(function($){
 					var alt = 		nextitem.find('img').attr('alt');
 					var caption = 	nextitem.find('dd').text();
 
-					$('#lightbox #photo').attr('src', src).attr('alt', alt);
-					$('#lightbox .caption').text(caption);
+					$('#lightbox #img-box').addClass('changing');
+
+
+					window.setTimeout(changeSrc, 500);
+					window.setTimeout(showImage, 600);
+
+					function changeSrc() {
+						$('#lightbox #photo').attr('src', src).attr('alt', alt);
+						$('#lightbox .caption').text(caption);
+					}
+
+					function showImage() {
+						$('#lightbox #img-box').removeClass('changing');
+					}
 				});
 
 

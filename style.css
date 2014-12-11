@@ -541,6 +541,8 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   height: auto;
   vertical-align: middle;
   position: relative;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 #lightbox .image #img-box #photo {
   display: block;
@@ -561,6 +563,9 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   background: black;
   background: rgba(0, 0, 0, 0.8);
   color: #f5f4f5;
+}
+#lightbox .image #img-box.changing {
+  opacity: 0;
 }
 #lightbox .image #next, #lightbox .image #prev {
   display: block;

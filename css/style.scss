@@ -718,6 +718,9 @@ footer {
 			height: auto;
 			vertical-align: middle;
 			position: relative;
+			opacity: 1;
+			transition: opacity 0.3s;
+
 
 			#photo{
 				display: block;
@@ -739,6 +742,10 @@ footer {
 				background: black;
 				background: rgba(0,0,0,0.8);
 				color: $white;
+			}
+
+			&.changing{
+				opacity: 0;
 			}
 		}
 
