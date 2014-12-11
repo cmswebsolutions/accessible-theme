@@ -481,35 +481,6 @@ header{
 			summary::-o-details-marker { display:none; }
 			summary::details-marker { display:none; }
 
-			&[open]{
-				margin-bottom: 1.5em;
-
-				summary{
-					&:after{
-						opacity: 0;
-						transition: all 0.15s;
-						content: "Collapse";
-						text-transform: uppercase;
-						display: inline-block;
-						padding: 0.5em;
-						color: white;
-						font-size: 62%;
-						letter-spacing: 0.08em;
-						position: absolute;
-						top: 0;
-						left: 0;
-					}
-
-					&:hover{
-						padding-top: 1.25em;
-
-						&:after{
-							opacity: 1;
-						}
-					}
-				}
-			}
-
 			summary{
 				border: 1px solid #EEE;
 				position: relative;
@@ -523,14 +494,54 @@ header{
 				background: $colour;
 				transition: all 0.15s;
 				outline: none;
+				padding-right: 3.25em;
+
+				&:after{
+					transition: all 0.15s;
+					content: "Expand";
+					text-transform: uppercase;
+					display: inline-block;
+					padding: 0.5em;
+					color: white;
+					font-size: 62%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					opacity: 0.75;
+				}
 
 				&:hover, &:focus{
 					background: darken($colour, 10%);
-					position: relative;
 					color: #DEDEDE;
 				}
 			}
+
+			&[open]{
+				margin-bottom: 1.5em;
+
+				summary{
+
+					&:after{
+						content: "Collapse"
+					}
+				}
+			}
 		}
+	}
+}
+
+
+.spinner{
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-bottom: 60px solid transparent;
+
+	border-left: 60px solid green;
+
+	&:hover{
+		border-left-width: 70px;
 	}
 }
 
@@ -667,7 +678,6 @@ footer {
 }
 
 #lightbox{
-
 	opacity: 0;
 	pointer-events: none;
 	position: fixed;
@@ -716,10 +726,6 @@ footer {
 				width: auto;
 				box-shadow: 0 0 1em rgba(0,0,0,0.8);
 				pointer-events: none;
-
-				img{
-					pointer-events: none;
-				}
 			}
 
 			.caption{
@@ -872,8 +878,6 @@ footer {
 			width: 100%;
 		}
 	}
-
-
 }
 
 

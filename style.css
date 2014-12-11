@@ -361,29 +361,6 @@ header nav ul li ul {
 #main #content details.editor summary::details-marker {
   display: none;
 }
-#main #content details.editor[open] {
-  margin-bottom: 1.5em;
-}
-#main #content details.editor[open] summary:after {
-  opacity: 0;
-  transition: all 0.15s;
-  content: "Collapse";
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 0.5em;
-  color: white;
-  font-size: 62%;
-  letter-spacing: 0.08em;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#main #content details.editor[open] summary:hover {
-  padding-top: 1.25em;
-}
-#main #content details.editor[open] summary:hover:after {
-  opacity: 1;
-}
 #main #content details.editor summary {
   border: 1px solid #eee;
   position: relative;
@@ -397,11 +374,41 @@ header nav ul li ul {
   background: #173e64;
   transition: all 0.15s;
   outline: none;
+  padding-right: 3.25em;
+}
+#main #content details.editor summary:after {
+  transition: all 0.15s;
+  content: "Expand";
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.5em;
+  color: white;
+  font-size: 62%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.75;
 }
 #main #content details.editor summary:hover, #main #content details.editor summary:focus {
   background: #0d243b;
-  position: relative;
   color: #dedede;
+}
+#main #content details.editor[open] {
+  margin-bottom: 1.5em;
+}
+#main #content details.editor[open] summary:after {
+  content: "Collapse";
+}
+.spinner {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid green;
+}
+.spinner:hover {
+  border-left-width: 70px;
 }
 .post-list article {
   border-bottom: 1px solid #ccc;
@@ -541,9 +548,6 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   max-height: 100%;
   width: auto;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}
-#lightbox .image #img-box #photo img {
   pointer-events: none;
 }
 #lightbox .image #img-box .caption {

@@ -52,7 +52,7 @@
             ed.addCommand('details', function() {
                 var selected_text = ed.selection.getContent();
                 var return_text = '';
-                return_text = '<details class="editor" open><summary>My Heading</summary><div class="details-content">' + selected_text + '</div></details>';
+                return_text = '<details class="editor"><summary>My Heading</summary><div class="details-content">' + selected_text + '</div></details>';
                 ed.execCommand('mceInsertContent', 0, return_text);
             });
 

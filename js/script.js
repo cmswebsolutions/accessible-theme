@@ -160,7 +160,6 @@ jQuery(document).ready(function($){
 
 				// Next photo button
 				$('#lightbox #next').on('click', function(e){
-
 					currentitem++;
 
 					var nextslide = currentitem + 1;
