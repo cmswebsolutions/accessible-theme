@@ -678,6 +678,7 @@ footer {
 	}
 }
 
+
 #lightbox{
 	opacity: 0;
 	pointer-events: none;
@@ -690,6 +691,35 @@ footer {
 
 	background: rgba(0,0,0,0.85);
 	//transition: opacity 0.5s;
+
+	.loading{
+		position: fixed;
+		top: 40%;
+		left: 0;
+		color: white;
+		z-index: 3;
+		font-size: 2.5em;
+		padding: 0.5em;
+		//font-weight: bold;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.1s;
+		pointer-events: none;
+	}
+
+
+	&.changing{
+
+		#img-box, #prev, #next{
+			opacity: 0 !important;
+		}
+
+		.loading{
+			opacity: 1;
+		}
+	}
+
+
 
 	button{
 		pointer-events: none;
@@ -719,7 +749,7 @@ footer {
 			vertical-align: middle;
 			position: relative;
 			opacity: 1;
-			transition: opacity 0.3s;
+			transition: opacity 0.2s;
 
 
 			#photo{
@@ -743,10 +773,6 @@ footer {
 				background: rgba(0,0,0,0.8);
 				color: $white;
 			}
-
-			&.changing{
-				opacity: 0;
-			}
 		}
 
 		#next, #prev{
@@ -760,10 +786,8 @@ footer {
 			text-align: left;
 			border: none;
 			outline: none;
-
-
 			opacity: 0;
-			transition: opacity 0.3s;
+			transition: opacity 0.2s;
 			cursor: pointer;
 
 			&:hover, &:focus{
@@ -949,6 +973,7 @@ footer {
 
 	#lightbox{
 		font-size: 2vw;
+
 		.image{
 			#close{
 				top: 0.5em;
@@ -957,6 +982,7 @@ footer {
 
 			#next, #prev{
 				opacity: 0.8;
+
 				img{
 					width: 3em;
 				}

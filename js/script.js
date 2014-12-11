@@ -128,6 +128,7 @@ jQuery(document).ready(function($){
 					}
 				}
 
+				$('#img-box #photo').css('max-height', ( $(window).outerHeight() * 0.8 ) );
 				$(window).resize(function () {
 					$('#img-box #photo').css('max-height', ( $(window).outerHeight() * 0.8 ) );
 				});
@@ -189,18 +190,20 @@ jQuery(document).ready(function($){
 					var alt = 		nextitem.find('img').attr('alt');
 					var caption = 	nextitem.find('dd').text();
 
-					$('#lightbox #img-box').addClass('changing');
-
-					window.setTimeout(changeSrc, 1200);
-					window.setTimeout(showImage, 1500);
+					$('#lightbox').addClass('changing');
+					window.setTimeout(changeSrc, 200);
 
 					function changeSrc() {
+						var img = $('#lightbox #photo');
+						img.load(function(e){
+							window.setTimeout(showImage, 20);
+						});
 						$('#lightbox #photo').attr('src', src).attr('alt', alt);
 						$('#lightbox .caption').text(caption);
 					}
 
 					function showImage() {
-						$('#lightbox #img-box').removeClass('changing');
+						$('#lightbox').removeClass('changing');
 					}
 
 				});
@@ -224,19 +227,20 @@ jQuery(document).ready(function($){
 					var alt = 		nextitem.find('img').attr('alt');
 					var caption = 	nextitem.find('dd').text();
 
-					$('#lightbox #img-box').addClass('changing');
-
-
-					window.setTimeout(changeSrc, 500);
-					window.setTimeout(showImage, 600);
+					$('#lightbox').addClass('changing');
+					window.setTimeout(changeSrc, 200);
 
 					function changeSrc() {
+						var img = $('#lightbox #photo');
+						img.load(function(e){
+							window.setTimeout(showImage, 20);
+						});
 						$('#lightbox #photo').attr('src', src).attr('alt', alt);
 						$('#lightbox .caption').text(caption);
 					}
 
 					function showImage() {
-						$('#lightbox #img-box').removeClass('changing');
+						$('#lightbox').removeClass('changing');
 					}
 				});
 

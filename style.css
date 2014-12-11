@@ -518,6 +518,25 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.85);
 }
+#lightbox .loading {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  color: white;
+  z-index: 3;
+  font-size: 2.5em;
+  padding: 0.5em;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.1s;
+  pointer-events: none;
+}
+#lightbox.changing #img-box, #lightbox.changing #prev, #lightbox.changing #next {
+  opacity: 0 !important;
+}
+#lightbox.changing .loading {
+  opacity: 1;
+}
 #lightbox button {
   pointer-events: none;
 }
@@ -542,7 +561,7 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   vertical-align: middle;
   position: relative;
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
 }
 #lightbox .image #img-box #photo {
   display: block;
@@ -564,9 +583,6 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   background: rgba(0, 0, 0, 0.8);
   color: #f5f4f5;
 }
-#lightbox .image #img-box.changing {
-  opacity: 0;
-}
 #lightbox .image #next, #lightbox .image #prev {
   display: block;
   position: absolute;
@@ -579,7 +595,7 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   border: none;
   outline: none;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
   cursor: pointer;
 }
 #lightbox .image #next:hover, #lightbox .image #prev:hover, #lightbox .image #next:focus, #lightbox .image #prev:focus {
