@@ -115,14 +115,28 @@ jQuery(document).ready(function($){
 		});
 
 
+
 		$.fn.extend({
 			lightboxMe: function(){
+
+				window.addEventListener("touchmove", disableScroll);
+
+				function disableScroll(event){
+					if (!event.target.classList.contains('scrollable')) {
+						// no more scrolling
+						event.preventDefault();
+					}
+				}
+
+				$(window).resize(function () {
+					$('#img-box #photo').css('max-height', ( $(window).outerHeight() * 0.8 ) );
+				});
+
 
 				// remove all <br /> tags from the gallery
 				var gallery = $(this).parent().parent().parent();
 				$('.gallery').find('br').remove();
 
-				$('#img-box #photo').css('max-height', ( $(window).outerHeight() * 0.8 ) ) ;
 
 				// Find the number of images in the gallery
 				var gallerysize = gallery.find('.gallery-item');
@@ -177,7 +191,6 @@ jQuery(document).ready(function($){
 
 					$('#lightbox #photo').attr('src', src).attr('alt', alt);
 					$('#lightbox .caption').text(caption);
-
 				});
 
 				// Previous image button
@@ -201,13 +214,15 @@ jQuery(document).ready(function($){
 
 					$('#lightbox #photo').attr('src', src).attr('alt', alt);
 					$('#lightbox .caption').text(caption);
-
 				});
 
 
 				// Close Button
 				$('#lightbox #close').on('click keypress', function(event){
 					$('#lightbox').removeClass('active');
+
+					window.removeEventListener("touchmove", disableScroll);
+
 					var keycode = (event.keyCode ? event.keyCode : event.which);
 
 					if(keycode == '13'){

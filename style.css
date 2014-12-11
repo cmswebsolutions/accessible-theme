@@ -304,6 +304,7 @@ header nav ul li ul {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 2px;
 }
 #main #content .gallery .gallery-item dd {
   pointer-events: none;
@@ -700,6 +701,9 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
     padding: 0.25em !important;
     margin: 0;
   }
+  #lightbox {
+    font-size: 2vw;
+  }
   #lightbox .image #close {
     top: 0.5em;
     right: 0.5em;
@@ -774,6 +778,18 @@ footer ul.social li a.linkedin:hover, footer ul.social li a.linkedin:focus {
   header nav ul li.hover ul.sub-menu li a:hover, header nav ul li.hover ul.sub-menu li a:focus {
     background: #173e64;
     color: #f5f4f5;
+  }
+}
+@media screen and (max-width: 550px) {
+  #lightbox {
+    font-size: 3.5vw;
+  }
+  #lightbox .image #img-box .caption {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 150%;
   }
 }
 body.ios #lightbox .image #close {

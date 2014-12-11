@@ -419,6 +419,7 @@ header{
 							display: block;
 							width: 100%;
 							height: auto;
+							border-radius: 2px;
 						}
 					}
 				}
@@ -940,6 +941,7 @@ footer {
 	}
 
 	#lightbox{
+		font-size: 2vw;
 		.image{
 			#close{
 				top: 0.5em;
@@ -1044,6 +1046,25 @@ footer {
 		}
 	}
 
+
+
+}
+
+@media screen and (max-width: 550px){
+	#lightbox{
+		font-size: 3.5vw;
+		.image{
+			#img-box{
+				.caption{
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					font-size: 150%;
+				}
+			}
+		}
+	}
 }
 
 
