@@ -5,7 +5,7 @@
 			<div class="inner">
 				<p>&copy; <?php bloginfo( 'name' ); ?> <?php echo date("Y"); ?></p>
 
-				<div class="spinner"></div>
+				<!--<div class="spinner"></div>-->
 
 				<ul class="social">
 					<?php if(get_field('facebook_link', 'option')){ echo '<li><a href="' . get_field('facebook_link', 'option') . '" class="facebook">Facebook</a></li>';}?>
