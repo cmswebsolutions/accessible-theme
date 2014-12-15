@@ -31,8 +31,6 @@
 					<!--<h1><?php bloginfo( 'name' ); ?></h1>-->
 					<img class="logo" src="<?php echo bloginfo('template_directory'); ?>/img/logo.svg" alt="" />
 
-
-					<!--
 					<div id="search">
 						<form method="get" action="<?php bloginfo('url'); ?>/">
 							<label class="hidden" for="s">Search String</label>
@@ -42,7 +40,6 @@
 							<input type="submit" id="searchsubmit" name="searchsubmit" class="button" value="Search" />
 						</form>
 					</div>
-					-->
 
 					<nav role="navigation">
 						<?php wp_nav_menu( array( 'container' => false, 'menu_id' => '', 'menu_class' => '', 'theme_location' => 'primary' ) ); ?>

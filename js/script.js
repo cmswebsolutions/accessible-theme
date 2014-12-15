@@ -49,37 +49,40 @@ jQuery(document).ready(function($){
 
 
 
+		// "Sticky" functionality
 
+		if( !$('body').hasClass('full') ){
+			var tall = false;
 
-		var tall = false;
+			var headerHeight = $('header').outerHeight();
 
-		var headerHeight = $('header').outerHeight();
+			var windowHeight = $(window).outerHeight();
+			var mainHeight = $('main').outerHeight();
+			var footerHeight = $('footer').outerHeight();
+			windowHeight = windowHeight - footerHeight;
 
-		var windowHeight = $(window).outerHeight();
-		var mainHeight = $('main').outerHeight();
-		var footerHeight = $('footer').outerHeight();
-		windowHeight = windowHeight - footerHeight;
-
-		if( (windowHeight > headerHeight) && (mainHeight > headerHeight) ){
-			tall = true;
-		}
-
-		if(!tall) {
-			$('header').css('position', 'static').css('float', 'left');
-		} else {
-			var header = $('header');
-			var offset = header.offset();
-			var offsetX = offset.left;
-			var offsetY = offset.top;
-
-			function onScroll(e) {
-				window.scrollY >= offsetY ? header.addClass('sticky').css('padding-top', '2em') :
-				header.removeClass('sticky');
-				header.css('padding-top', '2em');
+			if( (windowHeight > headerHeight) && (mainHeight > headerHeight) ){
+				tall = true;
 			}
 
-			document.addEventListener('scroll', onScroll);
+			if(!tall) {
+				$('header').css('position', 'static').css('float', 'left');
+			} else {
+				var header = $('header');
+				var offset = header.offset();
+				var offsetX = offset.left;
+				var offsetY = offset.top;
+
+				function onScroll(e) {
+					window.scrollY >= offsetY ? header.addClass('sticky').css('padding-top', '2em') :
+					header.removeClass('sticky');
+					header.css('padding-top', '2em');
+				}
+
+				document.addEventListener('scroll', onScroll);
+			}
 		}
+
 
 
 
@@ -94,7 +97,6 @@ jQuery(document).ready(function($){
 
 
 		// Custom Gallery
-
 		// Gallery caption hover
 		$('.gallery dt a').on('focus blur', function(event){
 			if(event.type == 'focus'){
@@ -105,6 +107,7 @@ jQuery(document).ready(function($){
 			}
 		});
 
+
 		// lightboxMe
 		$('.gallery dt a').on('click keypress', function(event){
 			var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -113,7 +116,6 @@ jQuery(document).ready(function($){
 				$(this).parent().parent().lightboxMe();
 			}
 		});
-
 
 
 		$.fn.extend({

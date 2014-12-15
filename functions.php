@@ -3,7 +3,7 @@
 // Removes the WordPress version as a layer of simple security
 remove_action('wp_head', 'wp_generator');
 
-require( 'details-plugin/details.php' );
+//require( 'details-plugin/details.php' );
 
 
 function my_theme_add_editor_styles() {
@@ -95,6 +95,7 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 
 
 
+//add_theme_support( 'custom-header' );
 
 
 
@@ -114,6 +115,8 @@ function custom_size_gallery($attr) {
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page('Theme Settings');
 }
+
+
 
 
 

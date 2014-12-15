@@ -485,7 +485,7 @@ header{
 		}
 
 
-		details.editor{
+		details{
 			padding: 0;
 			border-radius: 3px;
 			transition: all 0.15s;
@@ -518,7 +518,7 @@ header{
 
 				&::after{
 					transition: all 0.15s;
-					content: "Expand";
+					content: "Expand +";
 					text-transform: uppercase;
 					display: inline-block;
 					padding: 0.5em;
@@ -542,8 +542,61 @@ header{
 				summary{
 
 					&::after{
-						content: "Collapse"
+						content: "Collapse -";
 					}
+				}
+			}
+		}
+
+
+
+		.mc-main{
+			padding: 0;
+			margin: 0;
+			.mc_bottomnav{
+				.my-calendar-nav{
+
+					ul{
+						height: auto;
+						margin: 0;
+						padding: 0;
+
+						li{
+							margin: 0;
+							padding: 0;
+							border: none;
+							border-radius: none;
+
+							&.my-calendar-prev, &.my-calendar-next{
+
+								a{
+									border: none;
+									display: block;
+									background: $colour;
+									color: white;
+									text-decoration: none;
+									font-size: 110%;
+									padding: 0.25em 3em;
+								}
+							}
+
+							&.my-calendar-prev{
+								padding-right: 1px;
+							}
+
+							&.my-calendar-next{
+								padding-left: 1px;
+							}
+						}
+					}
+				}
+			}
+
+			table{
+				caption{
+					background: none;
+					border: none;
+					color: $colour;
 				}
 			}
 		}
@@ -604,20 +657,7 @@ header{
 		}
 
 		button{
-			font-family: $opensans;
-			border-radius: 2px;
-			border: none;
-			background: $colour;
-			color: white;
-			padding: 0.25em 1em;
-			font-size: 100%;
-			font-weight: normal;
-			cursor: pointer;
-			transition: background 0.2s;
-
-			&:hover, &:focus{
-				background: darken($colour, 15%);
-			}
+			@extend .buttonstyle;
 		}
 	}
 }
