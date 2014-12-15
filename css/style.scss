@@ -380,6 +380,21 @@ header{
 		}
 
 
+		p.error{
+			border-radius: 2px;
+			color: white;
+			padding: 0.25em 1em;
+			background: darken(red, 15%);
+		}
+
+		.thanks p{
+			border-radius: 2px;
+			color: white;
+			padding: 0.25em 1em;
+			background: darken(green, 10%);
+		}
+
+
 		.gallery{
 
 			&:after{
@@ -475,6 +490,8 @@ header{
 			border-radius: 3px;
 			transition: all 0.15s;
 			outline: none;
+			width: 100%;
+			display: block;
 
 			summary::-webkit-details-marker { display:none; }
 			summary::-moz-details-marker { display:none; }
@@ -483,6 +500,7 @@ header{
 			summary::details-marker { display:none; }
 
 			summary{
+				display: block;
 				border: 1px solid #EEE;
 				position: relative;
 				font-size: 125%;
@@ -496,8 +514,9 @@ header{
 				transition: all 0.15s;
 				outline: none;
 				padding-right: 3.25em;
+				width: 100%;
 
-				&:after{
+				&::after{
 					transition: all 0.15s;
 					content: "Expand";
 					text-transform: uppercase;
@@ -522,7 +541,7 @@ header{
 
 				summary{
 
-					&:after{
+					&::after{
 						content: "Collapse"
 					}
 				}
@@ -532,19 +551,77 @@ header{
 }
 
 
-.spinner{
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 60px solid transparent;
-	border-bottom: 60px solid transparent;
+#content.contact{
 
-	border-left: 60px solid green;
 
-	&:hover{
-		border-left-width: 70px;
+
+	#contactForm{
+		margin: 0;
+		padding: 0;
+		max-width: 350px;
+
+		ul{
+			margin: 0;
+			padding: 0;
+
+			li{
+				list-style-type: none;
+				display: block;
+				margin: 0;
+				padding: 0;
+				margin-bottom: 0.5em;
+
+				label, input, textarea{
+					display: block;
+					width: 100%;
+					font-size: 1.25em;
+				}
+
+				label{
+					font-weight: bold;
+				}
+
+				input, textarea{
+					border: 1px solid #AAA;
+					border-radius: 2px;
+				}
+
+				input{
+					padding: 0.25em;
+					font-family: $opensans;
+				}
+
+				textarea{
+					font-family: $opensans;
+					min-height: 150px;
+				}
+
+				span.error{
+					color: darken(red, 15%);
+				}
+
+			}
+		}
+
+		button{
+			font-family: $opensans;
+			border-radius: 2px;
+			border: none;
+			background: $colour;
+			color: white;
+			padding: 0.25em 1em;
+			font-size: 100%;
+			font-weight: normal;
+			cursor: pointer;
+			transition: background 0.2s;
+
+			&:hover, &:focus{
+				background: darken($colour, 15%);
+			}
+		}
 	}
 }
+
 
 .post-list{
 	article{

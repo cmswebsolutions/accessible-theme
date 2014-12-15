@@ -274,6 +274,18 @@ header nav ul li ul {
   padding-right: 1em;
   font-weight: normal;
 }
+#main #content p.error {
+  border-radius: 2px;
+  color: white;
+  padding: 0.25em 1em;
+  background: #b30000;
+}
+#main #content .thanks p {
+  border-radius: 2px;
+  color: white;
+  padding: 0.25em 1em;
+  background: #004d00;
+}
 #main #content .gallery:after {
   display: block;
   content: "";
@@ -346,6 +358,8 @@ header nav ul li ul {
   border-radius: 3px;
   transition: all 0.15s;
   outline: none;
+  width: 100%;
+  display: block;
 }
 #main #content details.editor summary::-webkit-details-marker {
   display: none;
@@ -363,6 +377,7 @@ header nav ul li ul {
   display: none;
 }
 #main #content details.editor summary {
+  display: block;
   border: 1px solid #eee;
   position: relative;
   font-size: 125%;
@@ -376,8 +391,9 @@ header nav ul li ul {
   transition: all 0.15s;
   outline: none;
   padding-right: 3.25em;
+  width: 100%;
 }
-#main #content details.editor summary:after {
+#main #content details.editor summary::after {
   transition: all 0.15s;
   content: "Expand";
   text-transform: uppercase;
@@ -397,19 +413,62 @@ header nav ul li ul {
 #main #content details.editor[open] {
   margin-bottom: 1.5em;
 }
-#main #content details.editor[open] summary:after {
+#main #content details.editor[open] summary::after {
   content: "Collapse";
 }
-.spinner {
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-left: 60px solid green;
+#content.contact #contactForm {
+  margin: 0;
+  padding: 0;
+  max-width: 350px;
 }
-.spinner:hover {
-  border-left-width: 70px;
+#content.contact #contactForm ul {
+  margin: 0;
+  padding: 0;
+}
+#content.contact #contactForm ul li {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+#content.contact #contactForm ul li label, #content.contact #contactForm ul li input, #content.contact #contactForm ul li textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.25em;
+}
+#content.contact #contactForm ul li label {
+  font-weight: bold;
+}
+#content.contact #contactForm ul li input, #content.contact #contactForm ul li textarea {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+}
+#content.contact #contactForm ul li input {
+  padding: 0.25em;
+  font-family: "Open Sans", Helvetica, sans-serif, sans;
+}
+#content.contact #contactForm ul li textarea {
+  font-family: "Open Sans", Helvetica, sans-serif, sans;
+  min-height: 150px;
+}
+#content.contact #contactForm ul li span.error {
+  color: #b30000;
+}
+#content.contact #contactForm button {
+  font-family: "Open Sans", Helvetica, sans-serif, sans;
+  border-radius: 2px;
+  border: none;
+  background: #173e64;
+  color: white;
+  padding: 0.25em 1em;
+  font-size: 100%;
+  font-weight: normal;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#content.contact #contactForm button:hover, #content.contact #contactForm button:focus {
+  background: #091726;
 }
 .post-list article {
   border-bottom: 1px solid #ccc;
